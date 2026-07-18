@@ -1,0 +1,139 @@
+import { ArrowRight, BadgeCheck, Play, ShieldCheck, Sparkles } from "lucide-react";
+
+import { Reveal } from "@/components/reveal";
+
+export function HeroSection() {
+  return (
+    <section className="pt-32 md:pt-36">
+      <div className="container">
+        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+          <Reveal className="space-y-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-teal-100 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-teal-700 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulseSoft" />
+              Otoritas Sertifikasi Standar Nasional
+            </div>
+
+            <div className="space-y-5">
+              <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-7xl">
+                Wujudkan Produk Aman Dengan CertiTrust
+              </h1>
+              <p className="max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+                Kami membantu UMKM, produsen, dan perusahaan memastikan produk memenuhi
+                standar BPOM dengan proses yang jelas, cepat, dan terukur.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30"
+              >
+                Mulai Konsultasi
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-7 py-4 text-base font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50"
+              >
+                <Play className="h-4 w-4 fill-current" />
+                Lihat Layanan
+              </a>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                { value: "99%", label: "Lolos Audit", icon: BadgeCheck },
+                { value: "120+", label: "Klien Dibantu", icon: ShieldCheck },
+                { value: "7 Hari", label: "Respons Cepat", icon: Sparkles },
+              ].map((item, index) => {
+                const Icon = item.icon;
+
+                return (
+                  <Reveal key={item.label} delay={index * 120}>
+                    <div className="rounded-3xl border border-teal-50 bg-white p-5 shadow-[0_20px_50px_-20px_rgba(20,184,166,0.18)]">
+                      <Icon className="mb-4 h-5 w-5 text-teal-600" />
+                      <div className="text-2xl font-extrabold text-slate-950">{item.value}</div>
+                      <p className="mt-1 text-sm font-medium text-slate-500">{item.label}</p>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </Reveal>
+
+          <Reveal className="relative">
+            <div className="hero-gradient relative overflow-hidden rounded-[2.5rem] p-6 shadow-soft sm:p-8">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.28),transparent_35%)]" />
+
+              <div className="relative grid gap-5">
+                <div className="rounded-[2rem] border border-white/30 bg-white/15 p-4 backdrop-blur-md">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.24em] text-white/70">
+                        Sertifikasi Cepat
+                      </p>
+                      <h2 className="mt-2 text-2xl font-extrabold text-white">
+                        Review dokumen, audit, dan pendampingan
+                      </h2>
+                    </div>
+                    <span className="rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white">
+                      24/7
+                    </span>
+                  </div>
+                </div>
+
+                <div className="grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
+                  <div className="overflow-hidden rounded-[2rem] bg-white p-5 shadow-glow">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
+                          <ShieldCheck className="h-6 w-6" />
+                        </div>
+                        <div>
+                          <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">
+                            Laporan Sertifikasi
+                          </p>
+                          <p className="text-lg font-extrabold text-slate-900">CertiTrust Audit Flow</p>
+                        </div>
+                      </div>
+                      <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-600">
+                        Valid
+                      </span>
+                    </div>
+
+                    <div className="mt-6 space-y-3">
+                      {[
+                        "Pemeriksaan kelengkapan",
+                        "Analisis label & komposisi",
+                        "Pendampingan registrasi",
+                      ].map((item) => (
+                        <div key={item} className="flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3">
+                          <span className="h-2.5 w-2.5 rounded-full bg-teal-500" />
+                          <span className="text-sm font-semibold text-slate-600">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col justify-between rounded-[2rem] bg-slate-950 p-5 text-white shadow-2xl shadow-slate-950/20">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/60">
+                        Hasil Audit
+                      </p>
+                      <p className="mt-3 text-5xl font-extrabold">99%</p>
+                    </div>
+
+                    <div className="mt-10 rounded-[1.75rem] bg-white/10 p-4 backdrop-blur-sm">
+                      <p className="text-sm font-semibold text-white/80">Status laporan</p>
+                      <p className="mt-1 text-lg font-bold">Siap diajukan</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
