@@ -221,8 +221,11 @@ export function PortfolioSection() {
                 </div>
                 <div className="relative h-[70vh] bg-slate-100">
                   <div className="absolute inset-0 overflow-auto">
-                    <div className="flex min-h-full items-center justify-center p-6">
-                      <div className="relative h-[min(100%,640px)] w-[min(100%,980px)] transition-transform duration-200 ease-out" style={{ transform: `scale(${zoomScale})` }}>
+                    <div className="flex h-full min-h-full items-center justify-center p-6">
+                      <div
+                        className="relative h-full w-full max-w-[980px] transition-transform duration-200 ease-out"
+                        style={{ transform: `scale(${zoomScale})` }}
+                      >
                         <Image src={activeItem.image} alt={activeItem.alt} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 980px" priority />
                       </div>
                     </div>
