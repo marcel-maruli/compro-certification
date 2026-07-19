@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, ShieldCheck, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
+import { BrandLogo } from "@/components/brand-logo";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -17,16 +18,11 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-teal-50/80 bg-white/80 backdrop-blur-xl">
-      <div className="container">
-        <div className="flex items-center justify-between py-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 py-3 sm:px-4">
+      <div className="mx-auto max-w-7xl rounded-[1.75rem] border border-white/70 bg-white/80 shadow-[0_20px_50px_-25px_rgba(15,23,42,0.18)] backdrop-blur-xl">
+        <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-5">
           <a href="#home" className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-500 shadow-lg shadow-teal-200">
-              <ShieldCheck className="h-6 w-6 text-white" aria-hidden="true" />
-            </span>
-            <span className="text-2xl font-extrabold tracking-tight text-slate-900">
-              CertiTrust
-            </span>
+            <BrandLogo compact size={44} />
           </a>
 
           <nav className="hidden items-center gap-10 text-sm font-semibold text-slate-600 md:flex">
@@ -40,7 +36,7 @@ export function Navbar() {
           <div className="hidden md:block">
             <a
               href="#contact"
-              className="inline-flex items-center rounded-full bg-teal-500 px-7 py-3 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30"
+              className="inline-flex items-center rounded-full bg-teal-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30"
             >
               Konsultasi Gratis
             </a>
@@ -64,7 +60,7 @@ export function Navbar() {
           )}
         >
           <div className="min-h-0">
-            <nav className="flex flex-col gap-3 py-4 text-sm font-semibold text-slate-600">
+            <nav className="flex flex-col gap-3 px-4 py-4 text-sm font-semibold text-slate-600 sm:px-5">
               {navItems.map((item) => (
                 <a
                   key={item.href}

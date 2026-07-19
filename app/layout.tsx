@@ -5,15 +5,31 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 const plusJakartaSans = localFont({
-  src: "./fonts/PlusJakartaSans.ttf",
+  src: [
+    {
+      path: "../node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-400-normal.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-700-normal.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-800-normal.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
   variable: "--font-plus-jakarta-sans",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "CertiTrust | Wujudkan Produk Aman Dengan CertiTrust",
+  title: "VSN | Wujudkan Produk Aman Dengan VSN",
   description:
-    "Company profile CertiTrust untuk layanan sertifikasi BPOM, standardisasi, dan konsultasi produk aman.",
+    "Company profile VSN untuk layanan sertifikasi BPOM, standardisasi, dan konsultasi produk aman.",
 };
 
 export default function RootLayout({
@@ -23,7 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className="scroll-smooth">
-      <body className={`${plusJakartaSans.variable} font-sans bg-white text-slate-900 antialiased`}>
+      <body
+        className={`${plusJakartaSans.variable} font-sans bg-white text-slate-900 antialiased`}
+      >
         {children}
       </body>
     </html>

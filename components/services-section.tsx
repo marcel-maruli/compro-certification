@@ -1,5 +1,6 @@
 import { BookCheck, ClipboardCheck, FileSearch, ShieldCheck } from "lucide-react";
 
+import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 import { ServiceCard } from "@/components/service-card";
 
@@ -36,18 +37,14 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-24 md:py-32">
+    <section id="services" className="bg-slate-50/70 py-24 md:py-32">
       <div className="container">
-        <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.22em] text-teal-600">Layanan</p>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
-            Layanan yang dirancang untuk mempercepat kelayakan produk
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-slate-600">
-            Dari review awal sampai pendampingan sertifikasi, CertiTrust menjaga proses tetap
-            sederhana, terukur, dan mudah diikuti oleh tim Anda.
-          </p>
-        </Reveal>
+        <SectionHeading
+          align="center"
+          eyebrow="Layanan VSN"
+          title="Layanan yang dirancang untuk mempercepat kelayakan produk"
+          description="Dari review awal sampai pendampingan sertifikasi, VSN menjaga proses tetap sederhana, terukur, dan mudah diikuti oleh tim Anda."
+        />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {services.map((service, index) => (

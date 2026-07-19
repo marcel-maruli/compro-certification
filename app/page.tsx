@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/hero-section";
 import { Navbar } from "@/components/navbar";
 import { ProcessSection } from "@/components/process-section";
+import { PortfolioSection } from "@/components/portfolio-section";
 import { ServicesSection } from "@/components/services-section";
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <main id="home" className="overflow-hidden">
         <HeroSection />
         <AboutSection />
+        <PortfolioSection />
         <ServicesSection />
         <ProcessSection />
         <ContactSection />

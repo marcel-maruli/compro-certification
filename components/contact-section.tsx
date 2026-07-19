@@ -11,7 +11,7 @@ const contactDetails = [
   {
     icon: Mail,
     title: "Email",
-    text: "hello@certitrust.id",
+    text: "hello@vsn.id",
   },
   {
     icon: MapPin,
@@ -27,19 +27,20 @@ const contactDetails = [
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-24 md:py-32">
+    <section id="contact" className="bg-slate-50/70 py-24 md:py-32">
       <div className="container">
-        <div className="rounded-[2.75rem] bg-hero-gradient px-6 py-10 text-white shadow-soft sm:px-8 lg:px-10 lg:py-12">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-            <Reveal className="space-y-6">
+        <div className="overflow-hidden rounded-[2.75rem] bg-slate-950 text-white shadow-soft">
+          <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="bg-[linear-gradient(135deg,rgba(37,99,235,0.95),rgba(34,197,94,0.88))] px-6 py-10 sm:px-8 lg:px-10 lg:py-12">
+              <Reveal className="space-y-6">
               <p className="text-sm font-bold uppercase tracking-[0.22em] text-white/75">
-                Kontak
+                Kontak VSN
               </p>
               <h2 className="max-w-xl text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
                 Siap memulai proses sertifikasi produk Anda?
               </h2>
               <p className="max-w-xl text-lg leading-8 text-white/85">
-                Kirim detail produk Anda, dan tim CertiTrust akan membantu memetakan kebutuhan
+                Kirim detail produk Anda, dan tim VSN akan membantu memetakan kebutuhan
                 awal, alur kerja, serta langkah yang paling relevan.
               </p>
 
@@ -62,10 +63,11 @@ export function ContactSection() {
                   );
                 })}
               </div>
-            </Reveal>
+              </Reveal>
+            </div>
 
-            <Reveal>
-              <form className="rounded-[2rem] bg-white p-6 text-slate-900 shadow-2xl shadow-slate-950/10 sm:p-8">
+            <Reveal className="bg-white px-6 py-10 text-slate-900 sm:px-8 lg:px-10 lg:py-12">
+              <form className="rounded-[2rem] bg-white p-0 text-slate-900">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <label className="space-y-2">
                     <span className="text-sm font-bold text-slate-700">Nama</span>

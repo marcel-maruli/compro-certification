@@ -1,9 +1,9 @@
-# CertiTrust - Company Profile Design Specification
+# VSN - Company Profile Design Specification
 
 ## Brand Identity
 
-- **Brand Name**: CertiTrust
-- **Tagline**: "Wujudkan Produk Aman Dengan CertiTrust"
+- **Brand Name**: VSN
+- **Tagline**: "Wujudkan Produk Aman Dengan VSN"
 - **Industry**: BPOM Certification & Standardization Authority
 - **Target Audience**: Producers, UMKM, Corporate Companies (All segments)
 
@@ -51,7 +51,7 @@ Neutral: White, Slate 900 (Text), Slate 500 (Muted text)
       </div>
       <span
         class="text-slate-900 font-extrabold text-2xl tracking-tight font-display"
-        >CertiTrust</span
+        >VSN</span
       >
     </div>
     <div

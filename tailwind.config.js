@@ -18,16 +18,16 @@ module.exports = {
     extend: {
       colors: {
         teal: {
-          50: "#F0FDFA",
-          100: "#CCFBF1",
-          200: "#99F6E4",
-          300: "#5EEAD4",
-          400: "#2DD4BF",
-          500: "#14B8A6",
-          600: "#0F9C93",
-          700: "#0D9488",
-          800: "#0F766E",
-          900: "#115E59",
+          50: "#EEFDF8",
+          100: "#D7F7EE",
+          200: "#ABE9D9",
+          300: "#7AD8C0",
+          400: "#45C4A8",
+          500: "#1FAF95",
+          600: "#17907B",
+          700: "#116F62",
+          800: "#0F5A50",
+          900: "#0D4742",
         },
         emerald: {
           500: "#10B981",
@@ -60,7 +60,7 @@ module.exports = {
         pulseSoft: "pulseSoft 2.8s ease-in-out infinite",
       },
       backgroundImage: {
-        "hero-gradient": "linear-gradient(135deg, #14B8A6 0%, #0EA5E9 100%)",
+        "hero-gradient": "linear-gradient(135deg, #2563EB 0%, #22C55E 100%)",
       },
       borderRadius: {
         xl: "0.875rem",

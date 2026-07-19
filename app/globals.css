@@ -23,13 +23,14 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(20, 184, 166, 0.08), transparent 28%),
-    linear-gradient(180deg, #ffffff 0%, #f8fffd 100%);
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 26%),
+    radial-gradient(circle at 85% 18%, rgba(34, 197, 94, 0.08), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f7fffd 100%);
   color: var(--foreground);
 }
 
 ::selection {
-  background: rgba(20, 184, 166, 0.18);
+  background: rgba(37, 99, 235, 0.16);
 }
 
 .reveal {
@@ -54,8 +55,8 @@ body {
   height: 2px;
   background: repeating-linear-gradient(
     to right,
-    rgba(20, 184, 166, 0.8) 0,
-    rgba(20, 184, 166, 0.8) 8px,
+    rgba(37, 99, 235, 0.8) 0,
+    rgba(37, 99, 235, 0.8) 8px,
     transparent 8px,
     transparent 16px
   );
