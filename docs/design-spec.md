@@ -96,9 +96,9 @@ Neutral: White, Slate 900 (Text), Slate 500 (Muted text)
 
 - Gradient Background: `linear-gradient(135deg, #14B8A6 0%, #0EA5E9 100%)`
 - Large Hero Image with soft shadow and rounded corners
-- Animated badge with pulsing effect: "Otoritas Sertifikasi Standar Nasional"
+- Animated badge with pulsing effect: "Sertifikasi Registration Officer"
 - Split layout: Text (left) + Image (right)
-- Animated floating stat box showing "99% Lolos Audit"
+- Animated floating stat box showing document submission readiness
 
 ### Service Card Component
 

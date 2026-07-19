@@ -15,11 +15,11 @@ export function HeroSection() {
     <section className="relative overflow-hidden pt-28 md:pt-32 pb-10 md:pb-10">
       <div className="absolute inset-x-0 top-0 -z-10 h-[42rem] bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.09),transparent_40%),radial-gradient(circle_at_80%_25%,rgba(34,197,94,0.11),transparent_28%)]" />
       <div className="container">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:gap-14">
           <Reveal className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-teal-100 bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-teal-700 shadow-sm backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulseSoft" />
-              Otoritas Sertifikasi Standar Nasional
+              Sertifikasi Registration Officer
             </div>
 
             <div className="space-y-5">
@@ -42,13 +42,13 @@ export function HeroSection() {
                   </p>
                 </div>
               </div>
-              <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-7xl">
+              <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl xl:text-7xl">
                 Wujudkan Produk Aman Dengan VSN
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-                Kami membantu UMKM, produsen, dan perusahaan memastikan produk
-                memenuhi standar BPOM dengan proses yang jelas, cepat, dan
-                terukur.
+                Kami membantu calon Registration Officer menyiapkan dan
+                mengunggah persyaratan izin edar produk dengan proses yang
+                jelas, terarah, dan terukur.
               </p>
             </div>
 
@@ -69,24 +69,60 @@ export function HeroSection() {
               </a>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="flex gap-4 sm:grid-cols-3 flex-wrap">
               {[
-                { value: "xx%", label: "Lolos Audit", icon: BadgeCheck },
-                { value: "xx", label: "Klien Dibantu", icon: ShieldCheck },
-                { value: "xx Hari", label: "Respons Cepat", icon: Sparkles },
+                { label: "Klien Dibantu", icon: ShieldCheck },
+                {
+                  value: "95%",
+                  label: "Dokumen Siap Diajukan",
+                  icon: BadgeCheck,
+                },
+                { value: "7 Hari", label: "Respons Cepat", icon: Sparkles },
               ].map((item, index) => {
                 const Icon = item.icon;
 
                 return (
-                  <Reveal key={item.label} delay={index * 120}>
+                  <Reveal
+                    key={item.label}
+                    delay={index * 120}
+                    className={index == 0 ? "w-full" : "w-[48%]"}
+                  >
                     <div className="rounded-3xl border border-teal-50 bg-white p-5 shadow-[0_20px_50px_-20px_rgba(20,184,166,0.18)]">
                       <Icon className="mb-4 h-5 w-5 text-teal-600" />
-                      <div className="text-2xl font-extrabold text-slate-950">
-                        {item.value}
-                      </div>
-                      <p className="mt-1 text-sm font-medium text-slate-500">
+                      {item.value ? (
+                        <div className="text-2xl font-extrabold text-slate-950">
+                          {item.value}
+                        </div>
+                      ) : null}
+                      <p
+                        className={
+                          item.value
+                            ? "mt-1 text-sm font-medium text-slate-500"
+                            : "text-sm font-medium text-slate-500"
+                        }
+                      >
                         {item.label}
                       </p>
+                      {!item.value ? (
+                        <div className="mt-4 grid grid-cols-2 gap-2">
+                          {[
+                            { value: "3724", label: "UMKM" },
+                            { value: "144", label: "Industri" },
+                          ].map((subCard) => (
+                            <div
+                              key={subCard.label}
+                              className="rounded-2xl border border-teal-50 bg-teal-50/70 px-3 py-3"
+                            >
+                              <div className="text-lg font-extrabold text-teal-700">
+                                {subCard.value}
+                              </div>
+                              <p className="mt-0.5 text-xs font-semibold text-slate-500">
+                                {subCard.label}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
                   </Reveal>
                 );
@@ -94,57 +130,62 @@ export function HeroSection() {
             </div>
           </Reveal>
 
-          <Reveal className="relative">
-            <div className="hero-gradient relative overflow-hidden rounded-[2.5rem] p-6 shadow-soft sm:p-8">
+          <Reveal className="relative min-w-0">
+            <div className="hero-gradient relative min-w-0 overflow-hidden rounded-[2.5rem] p-5 shadow-soft sm:p-7">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.28),transparent_35%)]" />
 
               <div className="relative grid gap-5">
                 <div className="rounded-[2rem] border border-white/30 bg-white/15 p-4 backdrop-blur-md">
-                  <div className="flex items-center justify-between">
-                    <div>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0">
                       <p className="text-xs font-bold uppercase tracking-[0.24em] text-black/75">
-                        Sertifikasi Cepat
+                        Program Registration Officer
                       </p>
-                      <h2 className="mt-2 text-2xl font-extrabold text-black">
-                        Review dokumen, audit, dan pendampingan
+                      <h2 className="mt-2 max-w-xl text-xl font-extrabold leading-tight text-black sm:text-2xl">
+                        Siapkan dan unggah persyaratan izin edar
                       </h2>
                     </div>
-                    <span className="rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-black">
+                    <span className="shrink-0 rounded-full bg-white/15 px-3 py-2 text-sm font-bold text-black">
                       24/7
                     </span>
                   </div>
                 </div>
 
-                <div className="grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
-                  <div className="overflow-hidden rounded-[2rem] bg-white p-5 shadow-glow">
-                    <div className="flex items-center justify-between">
+                <div className="flex gap-4 flex-col">
+                  <div className="overflow-hidden rounded-[2rem] bg-white p-5 shadow-glow sm:p-6">
+                    <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-3">
                         <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-50 text-teal-600">
                           <ShieldCheck className="h-6 w-6" />
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">
-                            Laporan Sertifikasi
+                            Pengajuan Izin Edar
                           </p>
-                          <p className="text-lg font-extrabold text-slate-900">
-                            VSN Audit Flow
+                          <p className="text-lg font-extrabold leading-tight text-slate-900">
+                            Registration Officer Flow
                           </p>
                         </div>
                       </div>
-                      <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-600">
+                      <span className="shrink-0 rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-600">
                         Valid
                       </span>
                     </div>
 
-                    <div className="mt-6 space-y-3">
+                    <p className="mt-5 max-w-md text-sm leading-6 text-slate-500">
+                      Alur pendampingan untuk menyiapkan dokumen dan mengunggah
+                      persyaratan izin edar.
+                    </p>
+
+                    <div className="mt-5 space-y-2.5">
                       {[
-                        "Pemeriksaan kelengkapan",
-                        "Analisis label & komposisi",
-                        "Pendampingan registrasi",
+                        "Pemeriksaan kelengkapan dokumen",
+                        "Upload persyaratan izin edar",
+                        "Pendampingan sampai sertifikasi RO",
                       ].map((item) => (
                         <div
                           key={item}
-                          className="flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3"
+                          className="flex items-center gap-3 rounded-2xl bg-slate-50 px-3.5 py-3"
                         >
                           <span className="h-2.5 w-2.5 rounded-full bg-teal-500" />
                           <span className="text-sm font-semibold text-slate-600">
@@ -155,19 +196,34 @@ export function HeroSection() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col justify-between rounded-[2rem] bg-slate-950 p-5 text-white shadow-2xl shadow-slate-950/20">
-                    <div>
+                  <div className="min-w-0 rounded-[2rem] bg-slate-950 p-5 text-white shadow-2xl shadow-slate-950/20 sm:p-6">
+                    <div className="flex items-start justify-between gap-3">
                       <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/60">
-                        Hasil Audit
+                        Status Pengajuan
                       </p>
-                      <p className="mt-3 text-5xl font-extrabold">xx%</p>
+                      <span className="flex items-center gap-2 rounded-full bg-emerald-400/15 px-3 py-1.5 text-xs font-bold text-emerald-300">
+                        <span className="h-2 w-2 rounded-full bg-emerald-300" />
+                        Aktif
+                      </span>
                     </div>
 
-                    <div className="mt-10 rounded-[1.75rem] bg-white/10 p-4 backdrop-blur-sm">
-                      <p className="text-sm font-semibold text-white/80">
-                        Status laporan
-                      </p>
-                      <p className="mt-1 text-lg font-bold">Siap diajukan</p>
+                    <p className="mt-7 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
+                      Siap diunggah
+                    </p>
+                    <p className="mt-3 text-sm leading-6 text-white/65">
+                      Dokumen telah diarahkan untuk masuk ke proses pengajuan
+                      izin edar.
+                    </p>
+
+                    <div className="mt-7 grid grid-cols-2 gap-2">
+                      <div className="rounded-2xl bg-white/10 p-3">
+                        <p className="text-xs text-white/55">Tahap</p>
+                        <p className="mt-1 font-bold">01</p>
+                      </div>
+                      <div className="rounded-2xl bg-white/10 p-3">
+                        <p className="text-xs text-white/55">Gelar</p>
+                        <p className="mt-1 font-bold">RO</p>
+                      </div>
                     </div>
                   </div>
                 </div>

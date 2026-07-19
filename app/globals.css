@@ -24,10 +24,21 @@ html {
 body {
   background:
     radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 26%),
-    radial-gradient(circle at 85% 18%, rgba(34, 197, 94, 0.08), transparent 24%),
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(34, 197, 94, 0.08),
+      transparent 24%
+    ),
     linear-gradient(180deg, #ffffff 0%, #f7fffd 100%);
   color: var(--foreground);
 }
+
+/* Keep the desktop composition as compact as Chrome's 90% zoom view. */
+/* @media (min-width: 1024px) {
+  body {
+    zoom: 0.9;
+  }
+} */
 
 ::selection {
   background: rgba(37, 99, 235, 0.16);

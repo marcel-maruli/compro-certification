@@ -51,7 +51,7 @@ export function AboutSection() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
-                  { value: "xx+", label: "Tahun pengalaman" },
+                  // { value: "xx+", label: "Tahun pengalaman" },
                   { value: "3x", label: "Lebih efisien dalam review awal" },
                 ].map((stat) => (
                   <div
