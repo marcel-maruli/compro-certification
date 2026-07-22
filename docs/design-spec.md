@@ -58,33 +58,23 @@ Neutral: White, Slate 900 (Text), Slate 500 (Muted text)
       class="hidden md:flex items-center gap-10 text-slate-600 font-semibold"
     >
       <a
-        href="#home"
-        id="nav-home"
         class="hover:text-teal-600 transition-colors"
         >Beranda</a
       >
       <a
-        href="#about"
-        id="nav-about"
         class="hover:text-teal-600 transition-colors"
         >Tentang</a
       >
       <a
-        href="#services"
-        id="nav-services"
         class="hover:text-teal-600 transition-colors"
         >Layanan</a
       >
       <a
-        href="#process"
-        id="nav-process"
         class="hover:text-teal-600 transition-colors"
         >Proses</a
       >
     </div>
     <a
-      href="#contact"
-      id="nav-cta-btn"
       class="px-7 py-3 bg-teal-500 text-white rounded-full font-bold shadow-lg shadow-teal-500/20 btn-hover-effect"
       >Konsultasi Gratis</a
     >
@@ -120,7 +110,6 @@ Neutral: White, Slate 900 (Text), Slate 500 (Muted text)
     Service description text...
   </p>
   <a
-    href="#"
     class="flex items-center gap-2 font-bold text-teal-600 group-hover:text-white"
     >Selengkapnya <iconify-icon icon="lucide:chevron-right"></iconify-icon
   ></a>

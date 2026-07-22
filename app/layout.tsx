@@ -27,9 +27,9 @@ const plusJakartaSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "VSN | Wujudkan Produk Aman Dengan VSN",
+  title: "VSN | Sahabat UMKM & Industri",
   description:
-    "Company profile VSN untuk layanan sertifikasi BPOM, standardisasi, dan konsultasi produk aman.",
+    "Veritas Sahabat Nusantara, Sahabat UMKM & Industri untuk sertifikasi BPOM, standardisasi, dan konsultasi produk aman.",
 };
 
 export default function RootLayout({

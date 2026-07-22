@@ -77,9 +77,9 @@ const materials: GalleryItem[] = [
     image: visionImage,
     alt: "Logo dan visi PT Veritas Sahabat Nusantara",
     eyebrow: "Visi VSN",
-    title: "Membantu pertumbuhan ekonomi melalui kepatuhan",
+    title: "",
     description:
-      "VSN berkomitmen menjaga kepatuhan dan kualitas produk dalam negeri agar bisnis dapat tumbuh dengan lebih terpercaya.",
+      "Membangun percepatan pertumbuhan ekonomi dengan kepatuhan regulasi dan persaingan global.",
     aspect: "aspect-[4/5]",
   },
   {
@@ -153,7 +153,7 @@ export function PortfolioSection() {
   };
 
   return (
-    <section id="highlights" className="py-24 md:py-32">
+    <section className="py-24 md:py-32">
       <div className="container space-y-16">
         <Reveal>
           <div className="max-w-3xl">

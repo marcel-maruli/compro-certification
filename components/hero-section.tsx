@@ -19,7 +19,7 @@ export function HeroSection() {
           <Reveal className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-teal-100 bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-teal-700 shadow-sm backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulseSoft" />
-              Sertifikasi Registration Officer
+              Sahabat UMKM & Industri
             </div>
 
             <div className="space-y-5">
@@ -38,35 +38,33 @@ export function HeroSection() {
                     VSN
                   </p>
                   <p className="text-sm text-slate-500">
-                    Wujudkan Produk Aman Dengan VSN
+                    Sahabat UMKM & Industri
                   </p>
                 </div>
               </div>
-              <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl xl:text-7xl">
-                Wujudkan Produk Aman Dengan VSN
+              <h1 className="max-w-3xl text-xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+                Mencetak Registration Officer yang Kompeten.
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-                Kami membantu calon Registration Officer menyiapkan dan
-                mengunggah persyaratan izin edar produk dengan proses yang
-                jelas, terarah, dan terukur.
+                Veritas Sahabat Nusantara hadir sebagai Sahabat UMKM & Industri
+                untuk membantu menyiapkan dan mengunggah persyaratan izin edar
+                produk dengan proses yang jelas, terarah, dan terukur.
               </p>
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#contact"
+              <span
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30"
               >
                 Mulai Konsultasi
                 <ArrowRight className="h-4 w-4" />
-              </a>
-              <a
-                href="#services"
+              </span>
+              <span
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-7 py-4 text-base font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50"
               >
                 <Play className="h-4 w-4 fill-current" />
                 Lihat Layanan
-              </a>
+              </span>
             </div>
 
             <div className="flex gap-4 sm:grid-cols-3 flex-wrap">
@@ -172,16 +170,36 @@ export function HeroSection() {
                       </span>
                     </div>
 
-                    <p className="mt-5 max-w-md text-sm leading-6 text-slate-500">
-                      Alur pendampingan untuk menyiapkan dokumen dan mengunggah
-                      persyaratan izin edar.
+                    <p className="mt-5 max-w-md text-2xl leading-6 text-black font-bold">
+                      Proses Sertifikasi
                     </p>
 
                     <div className="mt-5 space-y-2.5">
                       {[
-                        "Pemeriksaan kelengkapan dokumen",
-                        "Upload persyaratan izin edar",
-                        "Pendampingan sampai sertifikasi RO",
+                        "Registrasi Pelatihan",
+                        "Pelatihan online/offline",
+                        "Post Test",
+                        "Sertifikasi",
+                      ].map((item) => (
+                        <div
+                          key={item}
+                          className="flex items-center gap-3 rounded-2xl bg-slate-50 px-3.5 py-3"
+                        >
+                          <span className="h-2.5 w-2.5 rounded-full bg-teal-500" />
+                          <span className="text-sm font-semibold text-slate-600">
+                            {item}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <p className="mt-5 max-w-md text-2xl leading-6 text-black font-bold">
+                      Proses Pendampingan
+                    </p>
+
+                    <div className="mt-5 space-y-2.5">
+                      {[
+                        "Pendampingan dan Pemeriksaan Kelengkapan Dokumen",
                       ].map((item) => (
                         <div
                           key={item}

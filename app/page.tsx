@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main id="home" className="overflow-hidden">
+      <main className="overflow-hidden">
         <HeroSection />
         <AboutSection />
         <PortfolioSection />

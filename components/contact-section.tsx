@@ -11,7 +11,7 @@ const contactDetails = [
   {
     icon: Mail,
     title: "Email",
-    text: "hello@vsn.id",
+    text: "veritassahabatnusantara@gmail.com",
   },
   {
     icon: MapPin,
@@ -27,7 +27,7 @@ const contactDetails = [
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-slate-50/70 py-24 md:py-32">
+    <section className="bg-slate-50/70 py-24 md:py-32">
       <div className="container">
         <div className="overflow-hidden rounded-[2.75rem] bg-slate-950 text-white shadow-soft">
           <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
@@ -44,19 +44,28 @@ export function ContactSection() {
                 awal, alur kerja, serta langkah yang paling relevan.
               </p>
 
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="flex gap-4 flex-wrap">
                 {contactDetails.map((item, index) => {
                   const Icon = item.icon;
 
                   return (
-                    <Reveal key={item.title} delay={index * 90}>
+                    <Reveal key={item.title} delay={index * 90} className="w-full">
                       <div className="flex h-full items-start gap-4 rounded-[1.75rem] bg-white/10 p-4 backdrop-blur-sm">
                         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/15">
                           <Icon className="h-5 w-5" aria-hidden="true" />
                         </div>
                         <div>
                           <p className="text-sm font-semibold text-white/70">{item.title}</p>
-                          <p className="mt-1 font-bold text-white">{item.text}</p>
+                          {item.title === "Email" ? (
+                            <a
+                              href={`mailto:${item.text}`}
+                              className="mt-1 block font-bold text-white underline-offset-4 hover:underline"
+                            >
+                              {item.text}
+                            </a>
+                          ) : (
+                            <p className="mt-1 font-bold text-white">{item.text}</p>
+                          )}
                         </div>
                       </div>
                     </Reveal>

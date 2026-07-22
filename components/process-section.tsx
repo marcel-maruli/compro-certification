@@ -27,7 +27,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section id="process" className="py-24 md:py-32">
+    <section className="py-24 md:py-32">
       <div className="container">
         <SectionHeading
           align="center"

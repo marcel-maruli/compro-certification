@@ -31,7 +31,7 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="bg-slate-50/70 py-24 md:py-32">
+    <section className="bg-slate-50/70 py-24 md:py-32">
       <div className="container">
         <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal className="lg:sticky lg:top-32">
@@ -43,11 +43,22 @@ export function AboutSection() {
                 Mitra terpercaya untuk produk aman, patuh, dan siap masuk pasar
               </h2>
               <p className="max-w-xl text-lg leading-8 text-slate-600">
-                VSN mendampingi proses sertifikasi BPOM dan standardisasi produk
+                Veritas Sahabat Nusantara adalah Sahabat UMKM & Industri yang
+                mendampingi proses sertifikasi BPOM dan standardisasi produk
                 dengan pendekatan yang rapi, hangat, dan berbasis detail. Kami
                 membantu tim Anda menghindari revisi berulang, mempercepat
                 validasi, dan menjaga kepercayaan pasar.
               </p>
+
+              <div className="rounded-3xl border border-teal-100 bg-teal-50/70 p-6">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">
+                  Visi VSN
+                </p>
+                <p className="mt-3 text-lg font-bold leading-8 text-slate-900">
+                  Membangun percepatan pertumbuhan ekonomi dengan kepatuhan
+                  regulasi dan persaingan global.
+                </p>
+              </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 {[

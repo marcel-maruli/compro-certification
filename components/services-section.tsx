@@ -37,7 +37,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="bg-slate-50/70 py-24 md:py-32">
+    <section className="bg-slate-50/70 py-24 md:py-32">
       <div className="container">
         <SectionHeading
           align="center"
