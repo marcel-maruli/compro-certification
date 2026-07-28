@@ -59,10 +59,10 @@ export function HeroSection() {
                   </p>
                 </div>
               </div>
-              <h1 className="max-w-3xl text-xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+              <h1 className="max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-4xl">
                 Mencetak UMKM & Industri yang Kompeten
               </h1>
-              <p className="max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+              <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-xl sm:leading-8">
                 Veritas Sahabat Nusantara hadir sebagai Sahabat UMKM & Industri
                 untuk membantu menyiapkan dan mengunggah persyaratan izin edar
                 produk dengan proses yang jelas, terarah, dan terukur.
@@ -70,12 +70,12 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <span className="group inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30">
+              <span className="group inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30 sm:px-7 sm:py-4 sm:text-base">
                 <WhatsAppIcon />
                 Mulai Konsultasi
                 <ArrowRight className="h-4 w-4" />
               </span>
-              <span className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-7 py-4 text-base font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50">
+              <span className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-5 py-3.5 text-sm font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50 sm:px-7 sm:py-4 sm:text-base">
                 <Play className="h-4 w-4 fill-current" />
                 Lihat Layanan
               </span>
@@ -108,10 +108,10 @@ export function HeroSection() {
                     delay={index * 120}
                     className="w-full"
                   >
-                    <div className="rounded-3xl border border-teal-50 bg-white p-5 shadow-[0_20px_50px_-20px_rgba(20,184,166,0.18)]">
-                      <Icon className="mb-4 h-5 w-5 text-teal-600" />
+                    <div className="rounded-3xl border border-teal-50 bg-white p-4 shadow-[0_20px_50px_-20px_rgba(20,184,166,0.18)] sm:p-5">
+                      <Icon className="mb-3 h-5 w-5 text-teal-600 sm:mb-4" />
                       {item.value ? (
-                        <div className="text-2xl font-extrabold text-slate-950">
+                        <div className="text-xl font-extrabold text-slate-950 sm:text-2xl">
                           {item.value}
                         </div>
                       ) : null}
@@ -134,7 +134,7 @@ export function HeroSection() {
                               key={subCard.label}
                               className="rounded-2xl border border-teal-50 bg-teal-50/70 px-3 py-3"
                             >
-                              <div className="text-lg font-extrabold text-teal-700">
+                              <div className="text-base font-extrabold text-teal-700 sm:text-lg">
                                 {subCard.value}
                               </div>
                               <p className="mt-0.5 text-xs font-semibold text-slate-500">
@@ -162,7 +162,7 @@ export function HeroSection() {
                       <p className="text-xs font-bold uppercase tracking-[0.24em] text-black/75">
                         Program Registration Officer
                       </p>
-                      <h2 className="mt-2 max-w-xl text-xl font-extrabold leading-tight text-black sm:text-2xl">
+                      <h2 className="mt-2 max-w-xl text-lg font-extrabold leading-tight text-black sm:text-2xl">
                         Siapkan dan unggah persyaratan izin edar
                       </h2>
                     </div>
@@ -190,7 +190,7 @@ export function HeroSection() {
                       </span>
                     </div>
 
-                    <p className="mt-5 max-w-md text-2xl leading-6 text-black font-bold">
+                    <p className="mt-5 max-w-md text-xl leading-6 text-black font-bold sm:text-2xl">
                       Proses Sertifikasi
                     </p>
 
@@ -213,7 +213,7 @@ export function HeroSection() {
                       ))}
                     </div>
 
-                    <p className="mt-5 max-w-md text-2xl leading-6 text-black font-bold">
+                    <p className="mt-5 max-w-md text-xl leading-6 text-black font-bold sm:text-2xl">
                       Proses Pendampingan
                     </p>
 
@@ -248,7 +248,7 @@ export function HeroSection() {
                       <p className="text-xs font-bold uppercase tracking-[0.2em] text-black/70">
                         {item.label}
                       </p>
-                      <p className="mt-2 text-lg font-extrabold">
+                      <p className="mt-2 text-base font-extrabold sm:text-lg">
                         {item.value}
                       </p>
                     </div>
