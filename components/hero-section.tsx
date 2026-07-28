@@ -10,6 +10,23 @@ import {
 import logoImage from "@/assets/logo.jpeg";
 import { Reveal } from "@/components/reveal";
 
+function WhatsAppIcon() {
+  return (
+    <span className="relative inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/95 text-[#25D366] shadow-sm transition-transform duration-300 group-hover:rotate-[-8deg] group-hover:scale-110">
+      <svg
+        aria-hidden="true"
+        className="h-5 w-5 fill-current"
+        viewBox="0 0 24 24"
+      >
+        <path d="M12 2.25a9.73 9.73 0 0 0-8.4 14.65L2.3 21.7l4.92-1.27A9.75 9.75 0 1 0 12 2.25Zm0 17.7a7.9 7.9 0 0 1-4.03-1.1l-.29-.17-2.92.76.78-2.84-.19-.3A7.94 7.94 0 1 1 12 19.95Zm4.35-5.93c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.18-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.59 4.1 3.63.57.25 1.02.4 1.37.51.58.18 1.1.15 1.51.09.46-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28Z" />
+      </svg>
+      <span className="absolute -right-0.5 -top-1 text-[10px] text-yellow-300">
+        ✦
+      </span>
+    </span>
+  );
+}
+
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden pt-28 md:pt-32 pb-10 md:pb-10">
@@ -43,7 +60,7 @@ export function HeroSection() {
                 </div>
               </div>
               <h1 className="max-w-3xl text-xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
-                Mencetak Registration Officer yang Kompeten.
+                Mencetak UMKM & Industri yang Kompeten
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
                 Veritas Sahabat Nusantara hadir sebagai Sahabat UMKM & Industri
@@ -53,15 +70,12 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <span
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-7 py-4 text-base font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30"
-              >
+              <span className="group inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30">
+                <WhatsAppIcon />
                 Mulai Konsultasi
                 <ArrowRight className="h-4 w-4" />
               </span>
-              <span
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-7 py-4 text-base font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50"
-              >
+              <span className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-7 py-4 text-base font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50">
                 <Play className="h-4 w-4 fill-current" />
                 Lihat Layanan
               </span>
@@ -71,11 +85,20 @@ export function HeroSection() {
               {[
                 { label: "Klien Dibantu", icon: ShieldCheck },
                 {
-                  value: "95%",
-                  label: "Dokumen Siap Diajukan",
+                  value: "Produk Resiko  Tinggi",
+                  label: "87 SKU (Average : 35 hari)",
                   icon: BadgeCheck,
                 },
-                { value: "7 Hari", label: "Respons Cepat", icon: Sparkles },
+                {
+                  value: "Produk Resiko Menengah Tinggi",
+                  label: "753 SKU (Average : 18 hari)",
+                  icon: BadgeCheck,
+                },
+                {
+                  value: "Produk Resiko Menangah Rendah",
+                  label: "462 SKU (Average : 2 hari)",
+                  icon: BadgeCheck,
+                },
               ].map((item, index) => {
                 const Icon = item.icon;
 
@@ -83,7 +106,7 @@ export function HeroSection() {
                   <Reveal
                     key={item.label}
                     delay={index * 120}
-                    className={index == 0 ? "w-full" : "w-[48%]"}
+                    className="w-full"
                   >
                     <div className="rounded-3xl border border-teal-50 bg-white p-5 shadow-[0_20px_50px_-20px_rgba(20,184,166,0.18)]">
                       <Icon className="mb-4 h-5 w-5 text-teal-600" />
@@ -157,9 +180,6 @@ export function HeroSection() {
                           <ShieldCheck className="h-6 w-6" />
                         </div>
                         <div className="min-w-0">
-                          <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">
-                            Pengajuan Izin Edar
-                          </p>
                           <p className="text-lg font-extrabold leading-tight text-slate-900">
                             Registration Officer Flow
                           </p>
@@ -179,7 +199,7 @@ export function HeroSection() {
                         "Registrasi Pelatihan",
                         "Pelatihan online/offline",
                         "Post Test",
-                        "Sertifikasi",
+                        "Sertifikasi Kompetensi",
                       ].map((item) => (
                         <div
                           key={item}
@@ -198,50 +218,19 @@ export function HeroSection() {
                     </p>
 
                     <div className="mt-5 space-y-2.5">
-                      {[
-                        "Pendampingan dan Pemeriksaan Kelengkapan Dokumen",
-                      ].map((item) => (
-                        <div
-                          key={item}
-                          className="flex items-center gap-3 rounded-2xl bg-slate-50 px-3.5 py-3"
-                        >
-                          <span className="h-2.5 w-2.5 rounded-full bg-teal-500" />
-                          <span className="text-sm font-semibold text-slate-600">
-                            {item}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="min-w-0 rounded-[2rem] bg-slate-950 p-5 text-white shadow-2xl shadow-slate-950/20 sm:p-6">
-                    <div className="flex items-start justify-between gap-3">
-                      <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/60">
-                        Status Pengajuan
-                      </p>
-                      <span className="flex items-center gap-2 rounded-full bg-emerald-400/15 px-3 py-1.5 text-xs font-bold text-emerald-300">
-                        <span className="h-2 w-2 rounded-full bg-emerald-300" />
-                        Aktif
-                      </span>
-                    </div>
-
-                    <p className="mt-7 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
-                      Siap diunggah
-                    </p>
-                    <p className="mt-3 text-sm leading-6 text-white/65">
-                      Dokumen telah diarahkan untuk masuk ke proses pengajuan
-                      izin edar.
-                    </p>
-
-                    <div className="mt-7 grid grid-cols-2 gap-2">
-                      <div className="rounded-2xl bg-white/10 p-3">
-                        <p className="text-xs text-white/55">Tahap</p>
-                        <p className="mt-1 font-bold">01</p>
-                      </div>
-                      <div className="rounded-2xl bg-white/10 p-3">
-                        <p className="text-xs text-white/55">Gelar</p>
-                        <p className="mt-1 font-bold">RO</p>
-                      </div>
+                      {["Pendampingan dan Pemeriksaan Kelengkapan Dokumen"].map(
+                        (item) => (
+                          <div
+                            key={item}
+                            className="flex items-center gap-3 rounded-2xl bg-slate-50 px-3.5 py-3"
+                          >
+                            <span className="h-2.5 w-2.5 rounded-full bg-teal-500" />
+                            <span className="text-sm font-semibold text-slate-600">
+                              {item}
+                            </span>
+                          </div>
+                        ),
+                      )}
                     </div>
                   </div>
                 </div>

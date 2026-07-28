@@ -23,20 +23,25 @@ export function Navbar() {
         <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-5">
           <span className="flex items-center gap-3">
             <BrandLogo compact size={44} />
+
+            <p className="text-sm font-bold uppercase text-slate-600">
+              VERSANA
+            </p>
           </span>
 
           <nav className="hidden items-center gap-10 text-sm font-semibold text-slate-600 md:flex">
             {navItems.map((item) => (
-              <span key={item.label} className="transition-colors hover:text-teal-600">
+              <span
+                key={item.label}
+                className="transition-colors hover:text-teal-600"
+              >
                 {item.label}
               </span>
             ))}
           </nav>
 
           <div className="hidden md:block">
-            <span
-              className="inline-flex items-center rounded-full bg-teal-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30"
-            >
+            <span className="inline-flex items-center rounded-full bg-teal-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30">
               Konsultasi Gratis
             </span>
           </div>

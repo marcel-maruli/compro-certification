@@ -40,14 +40,16 @@ export function AboutSection() {
                 Tentang VSN
               </p>
               <h2 className="max-w-xl text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
-                Mitra terpercaya untuk produk aman, patuh, dan siap masuk pasar
+                Mitra terpercaya untuk mempersiapkan produk untuk komersil
               </h2>
               <p className="max-w-xl text-lg leading-8 text-slate-600">
-                Veritas Sahabat Nusantara adalah Sahabat UMKM & Industri yang
-                mendampingi proses sertifikasi BPOM dan standardisasi produk
-                dengan pendekatan yang rapi, hangat, dan berbasis detail. Kami
-                membantu tim Anda menghindari revisi berulang, mempercepat
-                validasi, dan menjaga kepercayaan pasar.
+                Versana adalah sahabat UMKM dan Industri yang melalukan untuk
+                siap dalam persiapan pembuatan produk baru dengan pelatihan
+                berstandar BPOM. Versana membantu UMKM & Industri menghindari
+                revisi berulang, informasi kelengkapan dokumen yang dibutuhkan,
+                guna mempercepat UMKM & Industri dalam komersialisasi produk
+                baru maupun diversifikasi produk untuk memperbesar omset usaha,
+                dan mempercepat perputaran ekonomi produktif pada pasar domestik
               </p>
 
               <div className="rounded-3xl border border-teal-100 bg-teal-50/70 p-6">
