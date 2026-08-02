@@ -4,7 +4,8 @@ import {
   BadgeCheck,
   Play,
   ShieldCheck,
-  Sparkles,
+  Factory,
+  Users,
 } from "lucide-react";
 
 import logoImage from "@/assets/logo.jpeg";
@@ -29,7 +30,10 @@ function WhatsAppIcon() {
 
 export function HeroSection() {
   return (
-    <section id="beranda" className="relative scroll-mt-28 overflow-hidden pt-28 md:pt-32 pb-10 md:pb-10">
+    <section
+      id="beranda"
+      className="relative scroll-mt-28 overflow-hidden pt-28 md:pt-32 pb-10 md:pb-10"
+    >
       <div className="absolute inset-x-0 top-0 -z-10 h-[42rem] bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.09),transparent_40%),radial-gradient(circle_at_80%_25%,rgba(34,197,94,0.11),transparent_28%)]" />
       <div className="container">
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:gap-14">
@@ -132,19 +136,24 @@ export function HeroSection() {
                       {!item.value ? (
                         <div className="mt-4 grid grid-cols-2 gap-2">
                           {[
-                            { value: "3724", label: "UMKM" },
-                            { value: "144", label: "Industri" },
+                            { value: "3724", label: "UMKM", icon: Users },
+                            { value: "144", label: "Industri", icon: Factory },
                           ].map((subCard) => (
                             <div
                               key={subCard.label}
                               className="rounded-2xl border border-teal-50 bg-teal-50/70 px-3 py-3"
                             >
+                              <p className="mt-0.5 text-xs font-semibold text-slate-500 flex gap-2">
+                                <subCard.icon
+                                  className="mb-2 h-4 w-4 text-teal-600"
+                                  aria-hidden="true"
+                                />
+
+                                {subCard.label}
+                              </p>
                               <div className="text-base font-extrabold text-teal-700 sm:text-lg">
                                 {subCard.value}
                               </div>
-                              <p className="mt-0.5 text-xs font-semibold text-slate-500">
-                                {subCard.label}
-                              </p>
                             </div>
                           ))}
                         </div>
