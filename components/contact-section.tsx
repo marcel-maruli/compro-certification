@@ -35,6 +35,7 @@ export function ContactSection() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setIsSending(true);
     setStatus("idle");
     setErrorMessage("");
@@ -53,7 +54,7 @@ export function ContactSection() {
         throw new Error(result?.error ?? "Gagal mengirim pesan.");
       }
 
-      event.currentTarget.reset();
+      form.reset();
       setStatus("success");
     } catch (error) {
       setStatus("error");
