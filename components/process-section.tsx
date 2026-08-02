@@ -27,7 +27,7 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-24 md:py-32">
+    <section id="proses" className="scroll-mt-28 py-24 md:py-32">
       <div className="container">
         <SectionHeading
           align="center"

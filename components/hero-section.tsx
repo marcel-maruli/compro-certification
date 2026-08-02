@@ -29,7 +29,7 @@ function WhatsAppIcon() {
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-32 pb-10 md:pb-10">
+    <section id="beranda" className="relative scroll-mt-28 overflow-hidden pt-28 md:pt-32 pb-10 md:pb-10">
       <div className="absolute inset-x-0 top-0 -z-10 h-[42rem] bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.09),transparent_40%),radial-gradient(circle_at_80%_25%,rgba(34,197,94,0.11),transparent_28%)]" />
       <div className="container">
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:gap-14">
@@ -70,11 +70,16 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <span className="group inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30 sm:px-7 sm:py-4 sm:text-base">
+              <a
+                href="https://wa.me/6281299072452?text=Halo%20Veritas%20Sahabat%20Nusantara%2C%20saya%20ingin%20memulai%20konsultasi%20mengenai%20sertifikasi%20produk.%20Mohon%20informasi%20mengenai%20persyaratan%20dan%20prosesnya."
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-teal-500 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-teal-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-500/30 sm:px-7 sm:py-4 sm:text-base"
+              >
                 <WhatsAppIcon />
                 Mulai Konsultasi
                 <ArrowRight className="h-4 w-4" />
-              </span>
+              </a>
               <span className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-5 py-3.5 text-sm font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50 sm:px-7 sm:py-4 sm:text-base">
                 <Play className="h-4 w-4 fill-current" />
                 Lihat Layanan

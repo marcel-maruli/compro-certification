@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
 import { Building2, Mail, MapPin, PhoneCall, Send } from "lucide-react";
 
 import { Reveal } from "@/components/reveal";
@@ -26,8 +29,46 @@ const contactDetails = [
 ];
 
 export function ContactSection() {
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSending(true);
+    setStatus("idle");
+    setErrorMessage("");
+
+    const formData = new FormData(event.currentTarget);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(result?.error ?? "Gagal mengirim pesan.");
+      }
+
+      event.currentTarget.reset();
+      setStatus("success");
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Pesan belum terkirim. Silakan coba lagi.",
+      );
+    } finally {
+      setIsSending(false);
+    }
+  }
+
   return (
-    <section className="bg-slate-50/70 py-16 md:py-32">
+    <section id="kontak" className="scroll-mt-28 bg-slate-50/70 py-16 md:py-32">
       <div className="container">
         <div className="overflow-hidden rounded-[2rem] bg-slate-950 text-white shadow-soft sm:rounded-[2.75rem]">
           <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
@@ -76,21 +117,28 @@ export function ContactSection() {
             </div>
 
             <Reveal className="bg-white px-5 py-8 text-slate-900 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
-              <form className="rounded-[2rem] bg-white p-0 text-slate-900">
+              <form
+                className="rounded-[2rem] bg-white p-0 text-slate-900"
+                onSubmit={handleSubmit}
+              >
                 <div className="grid gap-4 sm:grid-cols-2">
                   <label className="space-y-2">
                     <span className="text-sm font-bold text-slate-700">Nama</span>
                     <input
+                      name="name"
                       type="text"
                       placeholder="Nama Anda"
+                      required
                       className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-400 focus:ring-4 focus:ring-teal-100 sm:text-base"
                     />
                   </label>
                   <label className="space-y-2">
                     <span className="text-sm font-bold text-slate-700">Perusahaan</span>
                     <input
+                      name="company"
                       type="text"
                       placeholder="Nama bisnis"
+                      required
                       className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-400 focus:ring-4 focus:ring-teal-100 sm:text-base"
                     />
                   </label>
@@ -100,16 +148,20 @@ export function ContactSection() {
                   <label className="space-y-2">
                     <span className="text-sm font-bold text-slate-700">Email</span>
                     <input
+                      name="email"
                       type="email"
                       placeholder="nama@perusahaan.com"
+                      required
                       className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-400 focus:ring-4 focus:ring-teal-100 sm:text-base"
                     />
                   </label>
                   <label className="space-y-2">
                     <span className="text-sm font-bold text-slate-700">Telepon</span>
                     <input
+                      name="phone"
                       type="tel"
                       placeholder="+62 ..."
+                      required
                       className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-400 focus:ring-4 focus:ring-teal-100 sm:text-base"
                     />
                   </label>
@@ -118,19 +170,32 @@ export function ContactSection() {
                 <label className="mt-4 block space-y-2">
                   <span className="text-sm font-bold text-slate-700">Pesan</span>
                   <textarea
+                    name="message"
                     rows={5}
                     placeholder="Ceritakan jenis produk, kebutuhan sertifikasi, atau kendala yang sedang Anda hadapi."
+                    required
                     className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-400 focus:ring-4 focus:ring-teal-100 sm:text-base"
                   />
                 </label>
 
                 <button
-                  type="button"
+                  type="submit"
+                  disabled={isSending}
                   className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal-500 px-6 py-3.5 text-sm font-bold text-white transition hover:bg-teal-600 sm:w-auto sm:px-7 sm:py-4 sm:text-base"
                 >
-                  Kirim Pesan
+                  {isSending ? "Mengirim..." : "Kirim Pesan"}
                   <Send className="h-4 w-4" />
                 </button>
+                {status === "success" ? (
+                  <p className="mt-4 text-sm font-semibold text-emerald-600">
+                    Pesan berhasil dikirim. Tim VSN akan segera menghubungi Anda.
+                  </p>
+                ) : null}
+                {status === "error" ? (
+                  <p className="mt-4 text-sm font-semibold text-red-600">
+                    {errorMessage || "Pesan belum terkirim. Silakan coba lagi."}
+                  </p>
+                ) : null}
               </form>
             </Reveal>
           </div>

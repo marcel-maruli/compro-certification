@@ -37,7 +37,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="bg-slate-50/70 py-24 md:py-32">
+    <section id="layanan" className="scroll-mt-28 bg-slate-50/70 py-24 md:py-32">
       <div className="container">
         <SectionHeading
           align="center"

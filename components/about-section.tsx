@@ -31,7 +31,7 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section className="bg-slate-50/70 py-24 md:py-32">
+    <section id="tentang" className="scroll-mt-28 bg-slate-50/70 py-24 md:py-32">
       <div className="container">
         <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal className="lg:sticky lg:top-32">
@@ -43,13 +43,10 @@ export function AboutSection() {
                 Mitra terpercaya untuk mempersiapkan produk untuk komersil
               </h2>
               <p className="max-w-xl text-lg leading-8 text-slate-600">
-                Versana adalah sahabat UMKM dan Industri yang melalukan untuk
-                siap dalam persiapan pembuatan produk baru dengan pelatihan
-                berstandar BPOM. Versana membantu UMKM & Industri menghindari
-                revisi berulang, informasi kelengkapan dokumen yang dibutuhkan,
-                guna mempercepat UMKM & Industri dalam komersialisasi produk
-                baru maupun diversifikasi produk untuk memperbesar omset usaha,
-                dan mempercepat perputaran ekonomi produktif pada pasar domestik
+                Versana hadir sebagai sahabat UMKM & Industri untuk melatih SDM
+                yang unggul dalam mempersiapkan produk dan kelengkapannya untuk
+                memperoleh Izin Edar dengan proses yang terarah, terukur, dan
+                termudah.
               </p>
 
               <div className="rounded-3xl border border-teal-100 bg-teal-50/70 p-6">

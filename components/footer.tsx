@@ -1,10 +1,10 @@
 import { BrandLogo } from "@/components/brand-logo";
 
 const footerLinks = [
-  { label: "Tentang" },
-  { label: "Layanan" },
-  { label: "Proses" },
-  { label: "Kontak" },
+  { label: "Tentang", href: "#tentang" },
+  { label: "Layanan", href: "#layanan" },
+  { label: "Proses", href: "#proses" },
+  { label: "Kontak", href: "#kontak" },
 ];
 
 export function Footer() {
@@ -13,15 +13,17 @@ export function Footer() {
       <div className="container py-10 sm:py-12">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <span className="flex items-center gap-3">
-            <BrandLogo size={44} />
+            <a href="#beranda" aria-label="Kembali ke beranda">
+              <BrandLogo size={44} />
+            </a>
             <p className="text-sm font-medium text-slate-500">Sahabat UMKM & Industri.</p>
           </span>
 
           <nav className="flex flex-wrap gap-5 text-sm font-semibold text-slate-600">
             {footerLinks.map((item) => (
-              <span key={item.label} className="transition hover:text-teal-600">
+              <a key={item.label} href={item.href} className="transition hover:text-teal-600">
                 {item.label}
-              </span>
+              </a>
             ))}
           </nav>
         </div>
