@@ -84,10 +84,10 @@ export function HeroSection() {
                 Mulai Konsultasi
                 <ArrowRight className="h-4 w-4" />
               </a>
-              <span className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-5 py-3.5 text-sm font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50 sm:px-7 sm:py-4 sm:text-base">
+              <a href="#layanan" className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-5 py-3.5 text-sm font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50 sm:px-7 sm:py-4 sm:text-base">
                 <Play className="h-4 w-4 fill-current" />
                 Lihat Layanan
-              </span>
+              </a>
             </div>
 
             <div className="flex gap-4 sm:grid-cols-3 flex-wrap">

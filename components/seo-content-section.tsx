@@ -1,6 +1,6 @@
 import { SectionHeading } from "@/components/section-heading";
 
-const faqs = [
+export const faqs = [
   {
     question: "Apa itu sertifikasi dan mengapa penting untuk produk?",
     answer:

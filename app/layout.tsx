@@ -6,7 +6,9 @@ import "./globals.css";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+  (process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000");
 
 const plusJakartaSans = localFont({
   src: [
@@ -33,21 +35,20 @@ const plusJakartaSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sertifikasi BPOM, Pelatihan & Teknologi Pangan | VSN",
+    default: "Konsultasi Sertifikasi BPOM & Izin Edar Produk | VSN",
     template: "%s | VSN",
   },
   description:
-    "Veritas Sahabat Nusantara membantu UMKM dan industri melalui sertifikasi, pelatihan, pendampingan BPOM, serta konsultasi teknologi pangan dan food technology.",
+    "Veritas Sahabat Nusantara membantu UMKM dan industri menyiapkan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer dengan proses yang jelas.",
   keywords: [
-    "certificate",
-    "sertifikat",
-    "sertifikasi",
-    "pelatihan",
-    "BPOM",
+    "sertifikasi BPOM",
+    "izin edar produk pangan",
+    "konsultan BPOM",
+    "pendampingan BPOM",
+    "review label produk",
+    "pelatihan Registration Officer",
     "teknologi pangan",
-    "food technology",
-    "izin edar",
-    "Registration Officer",
+    "konsultasi UMKM pangan",
   ],
   applicationName: "VSN - Veritas Sahabat Nusantara",
   authors: [{ name: "Veritas Sahabat Nusantara" }],
@@ -55,20 +56,23 @@ export const metadata: Metadata = {
   publisher: "Veritas Sahabat Nusantara",
   category: "business",
   alternates: { canonical: "/" },
+  formatDetection: { telephone: true, address: true, email: true },
   openGraph: {
     type: "website",
     locale: "id_ID",
     url: "/",
     siteName: "Veritas Sahabat Nusantara",
-    title: "Sertifikasi BPOM, Pelatihan & Teknologi Pangan | VSN",
+    title: "Konsultasi Sertifikasi BPOM & Izin Edar Produk | VSN",
     description:
-      "Pendampingan sertifikasi, pelatihan kompetensi, dan kepatuhan BPOM untuk produk pangan dan industri.",
+      "Pendampingan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer untuk UMKM dan industri.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "VSN - Konsultasi sertifikasi BPOM dan izin edar produk" }],
   },
   twitter: {
-    card: "summary",
-    title: "Sertifikasi BPOM, Pelatihan & Teknologi Pangan | VSN",
+    card: "summary_large_image",
+    title: "Konsultasi Sertifikasi BPOM & Izin Edar Produk | VSN",
     description:
-      "Pendampingan sertifikasi, pelatihan kompetensi, dan kepatuhan BPOM untuk produk pangan dan industri.",
+      "Pendampingan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer untuk UMKM dan industri.",
+    images: ["/opengraph-image"],
   },
   robots: { index: true, follow: true },
 };
