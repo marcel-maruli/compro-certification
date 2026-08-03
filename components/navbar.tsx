@@ -25,7 +25,7 @@ export function Navbar() {
             <BrandLogo compact size={44} />
 
             <p className="text-sm font-bold uppercase text-slate-600">
-              VERSANA
+              VERITAS SAHABAT NUSANTARA
             </p>
           </a>
 

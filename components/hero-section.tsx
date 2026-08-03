@@ -48,7 +48,7 @@ export function HeroSection() {
                 <span className="relative h-14 w-14 overflow-hidden rounded-2xl border border-white bg-white shadow-lg shadow-blue-100/60">
                   <Image
                     src={logoImage}
-                    alt="VSN logo"
+                    alt="Logo Veritas Sahabat Nusantara (VSN)"
                     fill
                     className="object-cover"
                     priority
@@ -56,7 +56,7 @@ export function HeroSection() {
                 </span>
                 <div>
                   <p className="text-sm font-bold uppercase tracking-[0.22em] text-teal-600">
-                    VSN
+                    VERITAS SAHABAT NUSANTARA
                   </p>
                   <p className="text-sm text-slate-500">
                     Sahabat UMKM & Industri
@@ -64,7 +64,7 @@ export function HeroSection() {
                 </div>
               </div>
               <h1 className="max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-4xl">
-                Mencetak UMKM & Industri yang Kompeten
+                Veritas Sahabat Nusantara: Mencetak UMKM & Industri yang Kompeten
               </h1>
               <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-xl sm:leading-8">
                 Veritas Sahabat Nusantara hadir sebagai Sahabat UMKM & Industri

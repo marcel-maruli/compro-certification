@@ -34,7 +34,7 @@ const organizationSchema = {
       serviceType: ["Sertifikasi produk", "Pelatihan Registration Officer", "Kepatuhan BPOM", "Konsultasi teknologi pangan"],
       knowsAbout: ["BPOM", "izin edar", "teknologi pangan", "keamanan pangan", "registrasi produk"],
     },
-    { "@type": "WebSite", "@id": `${siteUrl}/#website`, url: siteUrl, name: "VSN - Veritas Sahabat Nusantara", publisher: { "@id": `${siteUrl}/#organization` }, inLanguage: "id-ID" },
+    { "@type": "WebSite", "@id": `${siteUrl}/#website`, url: siteUrl, name: "Veritas Sahabat Nusantara", alternateName: "VSN", publisher: { "@id": `${siteUrl}/#organization` }, inLanguage: "id-ID" },
     { "@type": "FAQPage", "@id": `${siteUrl}/#faq`, mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
   ],
 };

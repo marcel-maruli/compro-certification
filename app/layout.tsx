@@ -35,8 +35,8 @@ const plusJakartaSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Konsultasi Sertifikasi BPOM & Izin Edar Produk | VSN",
-    template: "%s | VSN",
+    default: "Veritas Sahabat Nusantara | Konsultasi Sertifikasi BPOM",
+    template: "%s | Veritas Sahabat Nusantara",
   },
   description:
     "Veritas Sahabat Nusantara membantu UMKM dan industri menyiapkan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer dengan proses yang jelas.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     "teknologi pangan",
     "konsultasi UMKM pangan",
   ],
-  applicationName: "VSN - Veritas Sahabat Nusantara",
+  applicationName: "Veritas Sahabat Nusantara",
   authors: [{ name: "Veritas Sahabat Nusantara" }],
   creator: "Veritas Sahabat Nusantara",
   publisher: "Veritas Sahabat Nusantara",
@@ -62,14 +62,14 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: "/",
     siteName: "Veritas Sahabat Nusantara",
-    title: "Konsultasi Sertifikasi BPOM & Izin Edar Produk | VSN",
+    title: "Veritas Sahabat Nusantara | Konsultasi Sertifikasi BPOM",
     description:
       "Pendampingan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer untuk UMKM dan industri.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "VSN - Konsultasi sertifikasi BPOM dan izin edar produk" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Konsultasi Sertifikasi BPOM & Izin Edar Produk | VSN",
+    title: "Veritas Sahabat Nusantara | Konsultasi Sertifikasi BPOM",
     description:
       "Pendampingan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer untuk UMKM dan industri.",
     images: ["/opengraph-image"],

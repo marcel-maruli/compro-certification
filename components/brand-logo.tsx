@@ -24,7 +24,7 @@ export function BrandLogo({
       >
         <Image
           src={logoImage}
-          alt="VSN logo"
+          alt="Logo Veritas Sahabat Nusantara (VSN)"
           fill
           sizes={`${size}px`}
           className={cn("object-cover", imageClassName)}
