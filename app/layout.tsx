@@ -4,6 +4,10 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 const plusJakartaSans = localFont({
   src: [
     {
@@ -27,9 +31,46 @@ const plusJakartaSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "VSN | Sahabat UMKM & Industri",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Sertifikasi BPOM, Pelatihan & Teknologi Pangan | VSN",
+    template: "%s | VSN",
+  },
   description:
-    "Veritas Sahabat Nusantara, Sahabat UMKM & Industri untuk sertifikasi BPOM, standardisasi, dan konsultasi produk aman.",
+    "Veritas Sahabat Nusantara membantu UMKM dan industri melalui sertifikasi, pelatihan, pendampingan BPOM, serta konsultasi teknologi pangan dan food technology.",
+  keywords: [
+    "certificate",
+    "sertifikat",
+    "sertifikasi",
+    "pelatihan",
+    "BPOM",
+    "teknologi pangan",
+    "food technology",
+    "izin edar",
+    "Registration Officer",
+  ],
+  applicationName: "VSN - Veritas Sahabat Nusantara",
+  authors: [{ name: "Veritas Sahabat Nusantara" }],
+  creator: "Veritas Sahabat Nusantara",
+  publisher: "Veritas Sahabat Nusantara",
+  category: "business",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "/",
+    siteName: "Veritas Sahabat Nusantara",
+    title: "Sertifikasi BPOM, Pelatihan & Teknologi Pangan | VSN",
+    description:
+      "Pendampingan sertifikasi, pelatihan kompetensi, dan kepatuhan BPOM untuk produk pangan dan industri.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Sertifikasi BPOM, Pelatihan & Teknologi Pangan | VSN",
+    description:
+      "Pendampingan sertifikasi, pelatihan kompetensi, dan kepatuhan BPOM untuk produk pangan dan industri.",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
