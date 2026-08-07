@@ -9,9 +9,14 @@ import { ServicesSection } from "@/components/services-section";
 import { SeoContentSection } from "@/components/seo-content-section";
 import { faqs } from "@/components/seo-content-section";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+const siteUrl = "https://versana.id";
+
+const services = [
+  { name: "Registrasi Produk", description: "Pendampingan dokumen dan alur registrasi produk." },
+  { name: "Review Label dan Komposisi", description: "Review label, komposisi, klaim, dan dokumen pendukung." },
+  { name: "Kepatuhan BPOM", description: "Pemetaan risiko dan checklist persiapan kepatuhan BPOM." },
+  { name: "Pendampingan Sertifikasi", description: "Pendampingan persiapan sertifikasi dari awal hingga tindak lanjut." },
+];
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -22,7 +27,7 @@ const organizationSchema = {
       name: "Veritas Sahabat Nusantara",
       alternateName: ["VSN", "Versana"],
       url: siteUrl,
-      logo: `${siteUrl}/opengraph-image`,
+      logo: `${siteUrl}/icon.jpeg`,
       image: `${siteUrl}/opengraph-image`,
       email: "veritassahabatnusantara@gmail.com",
       telephone: "+62-812-9907-2452",
@@ -35,6 +40,7 @@ const organizationSchema = {
       knowsAbout: ["BPOM", "izin edar", "teknologi pangan", "keamanan pangan", "registrasi produk"],
     },
     { "@type": "WebSite", "@id": `${siteUrl}/#website`, url: siteUrl, name: "Veritas Sahabat Nusantara", alternateName: "VSN", publisher: { "@id": `${siteUrl}/#organization` }, inLanguage: "id-ID" },
+    ...services.map((service) => ({ "@type": "Service", provider: { "@id": `${siteUrl}/#organization` }, serviceType: service.name, name: service.name, description: service.description, areaServed: { "@type": "Country", name: "Indonesia" }, url: `${siteUrl}/#layanan` })),
     { "@type": "FAQPage", "@id": `${siteUrl}/#faq`, mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
   ],
 };

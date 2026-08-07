@@ -39,12 +39,13 @@ export function ServiceCard({ icon: Icon, title, description, points, className 
         ))}
       </ul>
 
-      <span
+      <a
+        href="#kontak"
         className="mt-8 inline-flex items-center gap-2 font-bold text-teal-600 transition-colors group-hover:text-white"
       >
-        Selengkapnya
+        Konsultasikan layanan ini
         <ArrowRight className="h-4 w-4" />
-      </span>
+      </a>
     </article>
   );
 }

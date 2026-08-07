@@ -9,7 +9,7 @@ const contactDetails = [
   {
     icon: PhoneCall,
     title: "Telepon",
-    text: "+62 812-3456-7890",
+    text: "+62 812-9907-2452",
   },
   {
     icon: Mail,

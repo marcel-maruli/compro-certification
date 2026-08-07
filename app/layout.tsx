@@ -4,11 +4,7 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000");
+const siteUrl = "https://versana.id";
 
 const plusJakartaSans = localFont({
   src: [
@@ -35,11 +31,11 @@ const plusJakartaSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Veritas Sahabat Nusantara | Konsultasi Sertifikasi BPOM",
+    default: "Jasa Konsultan Sertifikasi BPOM dan Izin Edar Produk | VSN",
     template: "%s | Veritas Sahabat Nusantara",
   },
   description:
-    "Veritas Sahabat Nusantara membantu UMKM dan industri menyiapkan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer dengan proses yang jelas.",
+    "Konsultan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer untuk UMKM dan industri pangan di Indonesia.",
   keywords: [
     "sertifikasi BPOM",
     "izin edar produk pangan",
@@ -55,21 +51,25 @@ export const metadata: Metadata = {
   creator: "Veritas Sahabat Nusantara",
   publisher: "Veritas Sahabat Nusantara",
   category: "business",
-  alternates: { canonical: "/" },
+  alternates: { canonical: siteUrl },
+  icons: {
+    icon: [{ url: "/icon.jpeg", type: "image/jpeg" }],
+    apple: "/icon.jpeg",
+  },
   formatDetection: { telephone: true, address: true, email: true },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "/",
     siteName: "Veritas Sahabat Nusantara",
-    title: "Veritas Sahabat Nusantara | Konsultasi Sertifikasi BPOM",
+    title: "Jasa Konsultan Sertifikasi BPOM dan Izin Edar Produk | VSN",
     description:
       "Pendampingan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer untuk UMKM dan industri.",
+    url: siteUrl,
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "VSN - Konsultasi sertifikasi BPOM dan izin edar produk" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Veritas Sahabat Nusantara | Konsultasi Sertifikasi BPOM",
+    title: "Jasa Konsultan Sertifikasi BPOM dan Izin Edar Produk | VSN",
     description:
       "Pendampingan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer untuk UMKM dan industri.",
     images: ["/opengraph-image"],

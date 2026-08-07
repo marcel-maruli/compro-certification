@@ -226,7 +226,7 @@ export function PortfolioSection() {
                         className="relative h-full w-full max-w-[980px] transition-transform duration-200 ease-out"
                         style={{ transform: `scale(${zoomScale})` }}
                       >
-                        <Image src={activeItem.image} alt={activeItem.alt} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 980px" priority />
+                        <Image src={activeItem.image} alt={activeItem.alt} fill className="object-contain" sizes="(max-width: 1024px) 100vw, 980px" />
                       </div>
                     </div>
                   </div>

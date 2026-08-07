@@ -64,7 +64,7 @@ export function HeroSection() {
                 </div>
               </div>
               <h1 className="max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-4xl">
-                Veritas Sahabat Nusantara: Mencetak UMKM & Industri yang Kompeten
+                Konsultan Sertifikasi BPOM dan Izin Edar Produk untuk UMKM & Industri
               </h1>
               <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-xl sm:leading-8">
                 Veritas Sahabat Nusantara hadir sebagai Sahabat UMKM & Industri

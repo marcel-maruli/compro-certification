@@ -8,6 +8,7 @@ type BrandLogoProps = {
   imageClassName?: string;
   size?: number;
   compact?: boolean;
+  priority?: boolean;
 };
 
 export function BrandLogo({
@@ -15,6 +16,7 @@ export function BrandLogo({
   imageClassName,
   size = 44,
   compact = false,
+  priority = false,
 }: BrandLogoProps) {
   return (
     <div className={cn("flex items-center gap-3", className)}>
@@ -28,7 +30,7 @@ export function BrandLogo({
           fill
           sizes={`${size}px`}
           className={cn("object-cover", imageClassName)}
-          priority
+          priority={priority}
         />
       </span>
       {!compact ? (
