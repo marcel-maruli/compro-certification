@@ -8,15 +8,9 @@ import { PortfolioSection } from "@/components/portfolio-section";
 import { ServicesSection } from "@/components/services-section";
 import { SeoContentSection } from "@/components/seo-content-section";
 import { faqs } from "@/components/seo-content-section";
+import { services } from "@/lib/services";
 
 const siteUrl = "https://versana.id";
-
-const services = [
-  { name: "Registrasi Produk", description: "Pendampingan dokumen dan alur registrasi produk." },
-  { name: "Review Label dan Komposisi", description: "Review label, komposisi, klaim, dan dokumen pendukung." },
-  { name: "Kepatuhan BPOM", description: "Pemetaan risiko dan checklist persiapan kepatuhan BPOM." },
-  { name: "Pendampingan Sertifikasi", description: "Pendampingan persiapan sertifikasi dari awal hingga tindak lanjut." },
-];
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -40,7 +34,7 @@ const organizationSchema = {
       knowsAbout: ["BPOM", "izin edar", "teknologi pangan", "keamanan pangan", "registrasi produk"],
     },
     { "@type": "WebSite", "@id": `${siteUrl}/#website`, url: siteUrl, name: "Veritas Sahabat Nusantara", alternateName: "VSN", publisher: { "@id": `${siteUrl}/#organization` }, inLanguage: "id-ID" },
-    ...services.map((service) => ({ "@type": "Service", provider: { "@id": `${siteUrl}/#organization` }, serviceType: service.name, name: service.name, description: service.description, areaServed: { "@type": "Country", name: "Indonesia" }, url: `${siteUrl}/#layanan` })),
+    ...services.map((service) => ({ "@type": "Service", provider: { "@id": `${siteUrl}/#organization` }, serviceType: service.title, name: service.title, description: service.description, areaServed: { "@type": "Country", name: "Indonesia" }, url: `${siteUrl}/layanan/${service.slug}` })),
     { "@type": "FAQPage", "@id": `${siteUrl}/#faq`, mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
   ],
 };

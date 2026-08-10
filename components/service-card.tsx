@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 
@@ -8,10 +9,11 @@ type ServiceCardProps = {
   title: string;
   description: string;
   points: string[];
+  slug: string;
   className?: string;
 };
 
-export function ServiceCard({ icon: Icon, title, description, points, className }: ServiceCardProps) {
+export function ServiceCard({ icon: Icon, title, description, points, slug, className }: ServiceCardProps) {
   return (
     <article
       className={cn(
@@ -39,13 +41,13 @@ export function ServiceCard({ icon: Icon, title, description, points, className 
         ))}
       </ul>
 
-      <a
-        href="#kontak"
+      <Link
+        href={`/layanan/${slug}`}
         className="mt-8 inline-flex items-center gap-2 font-bold text-teal-600 transition-colors group-hover:text-white"
       >
-        Konsultasikan layanan ini
+        Lihat detail layanan
         <ArrowRight className="h-4 w-4" />
-      </a>
+      </Link>
     </article>
   );
 }
