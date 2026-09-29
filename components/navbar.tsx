@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { label: "Beranda", href: "/#beranda" },
   { label: "Tentang", href: "/#tentang" },
+  { label: "Pelatihan", href: "/#pelatihan" },
   { label: "Layanan", href: "/#layanan" },
   { label: "Proses", href: "/#proses" },
   { label: "Kontak", href: "/#kontak" },

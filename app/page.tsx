@@ -7,6 +7,7 @@ import { ProcessSection } from "@/components/process-section";
 import { PortfolioSection } from "@/components/portfolio-section";
 import { ServicesSection } from "@/components/services-section";
 import { SeoContentSection } from "@/components/seo-content-section";
+import { TrainingSection } from "@/components/training-section";
 import { faqs } from "@/components/seo-content-section";
 import { services } from "@/lib/services";
 
@@ -49,6 +50,7 @@ export default function HomePage() {
       <Navbar />
       <main className="overflow-hidden">
         <HeroSection />
+        <TrainingSection />
         <AboutSection />
         <PortfolioSection />
         <ServicesSection />
