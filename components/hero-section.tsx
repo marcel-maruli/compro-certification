@@ -64,12 +64,13 @@ export function HeroSection() {
                 </div>
               </div>
               <h1 className="max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-4xl">
-                Konsultan Sertifikasi BPOM dan Izin Edar Produk untuk UMKM & Industri
+                Konsultan Sertifikasi BPOM dan Izin Edar Produk untuk UMKM &
+                Industri
               </h1>
               <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-xl sm:leading-8">
-                Veritas Sahabat Nusantara hadir sebagai Sahabat UMKM & Industri
-                untuk membantu menyiapkan dan mengunggah persyaratan izin edar
-                produk dengan proses yang jelas, terarah, dan terukur.
+                Veritas Sahabat Nusantara hadir sebagai Sahabat Masyarakat,
+                UMKM, & Industri untuk meningkatkan kompetensi dibidang
+                Kesehatan, Obat, OBA, Kosmetik, dan Pangan.
               </p>
             </div>
 
@@ -84,7 +85,10 @@ export function HeroSection() {
                 Mulai Konsultasi
                 <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="#layanan" className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-5 py-3.5 text-sm font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50 sm:px-7 sm:py-4 sm:text-base">
+              <a
+                href="#layanan"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-teal-100 bg-white px-5 py-3.5 text-sm font-bold text-teal-700 shadow-sm transition hover:border-teal-200 hover:bg-teal-50 sm:px-7 sm:py-4 sm:text-base"
+              >
                 <Play className="h-4 w-4 fill-current" />
                 Lihat Layanan
               </a>

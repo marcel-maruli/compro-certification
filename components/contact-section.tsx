@@ -8,8 +8,8 @@ import { Reveal } from "@/components/reveal";
 const contactDetails = [
   {
     icon: PhoneCall,
-    title: "Telepon",
-    text: "+62 812-9907-2452",
+    title: "Help Desk",
+    text: ["+62 812-9907-2452", "+62 821-2542-8400 (Fani)"],
   },
   {
     icon: Mail,
@@ -75,45 +75,59 @@ export function ContactSection() {
           <div className="grid gap-0 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="bg-[linear-gradient(135deg,rgba(37,99,235,0.95),rgba(34,197,94,0.88))] px-5 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
               <Reveal className="space-y-6">
-              <p className="text-sm font-bold uppercase tracking-[0.22em] text-white/75">
-                Kontak VSN
-              </p>
-              <h2 className="max-w-xl text-2xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                Siap memulai proses sertifikasi produk Anda?
-              </h2>
-              <p className="max-w-xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
-                Kirim detail produk Anda, dan tim VSN akan membantu memetakan kebutuhan
-                awal, alur kerja, serta langkah yang paling relevan.
-              </p>
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-white/75">
+                  Kontak VSN
+                </p>
+                <h2 className="max-w-xl text-2xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                  Siap memulai proses sertifikasi produk Anda?
+                </h2>
+                <p className="max-w-xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
+                  Kirim detail produk Anda, dan tim VSN akan membantu memetakan
+                  kebutuhan awal, alur kerja, serta langkah yang paling relevan.
+                </p>
 
-              <div className="flex flex-col gap-3">
-                {contactDetails.map((item, index) => {
-                  const Icon = item.icon;
+                <div className="flex flex-col gap-3">
+                  {contactDetails.map((item, index) => {
+                    const Icon = item.icon;
 
-                  return (
-                    <Reveal key={item.title} delay={index * 90} className="w-full">
-                      <div className="flex h-full min-w-0 items-start gap-3 rounded-[1.5rem] bg-white/10 p-3.5 backdrop-blur-sm sm:gap-4 sm:rounded-[1.75rem] sm:p-4">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/15">
-                          <Icon className="h-5 w-5" aria-hidden="true" />
+                    return (
+                      <Reveal
+                        key={item.title}
+                        delay={index * 90}
+                        className="w-full"
+                      >
+                        <div className="flex h-full min-w-0 items-start gap-3 rounded-[1.5rem] bg-white/10 p-3.5 backdrop-blur-sm sm:gap-4 sm:rounded-[1.75rem] sm:p-4">
+                          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white/15">
+                            <Icon className="h-5 w-5" aria-hidden="true" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-sm font-semibold text-white/70">
+                              {item.title}
+                            </p>
+                            {item.title === "Email" ? (
+                              <a
+                                href={`mailto:${item.text}`}
+                                className="mt-1 block break-all text-sm font-bold text-white underline-offset-4 hover:underline sm:text-base"
+                              >
+                                {item.text}
+                              </a>
+                            ) : Array.isArray(item.text) ? (
+                              <div className="mt-1 list-inside list-decimal space-y-1 text-sm font-bold text-white sm:text-base">
+                                {item.text.map((phoneNumber) => (
+                                  <p key={phoneNumber}>{phoneNumber}</p>
+                                ))}
+                              </div>
+                            ) : (
+                              <p className="mt-1 text-sm font-bold text-white sm:text-base">
+                                {item.text}
+                              </p>
+                            )}
+                          </div>
                         </div>
-                        <div className="min-w-0">
-                          <p className="text-sm font-semibold text-white/70">{item.title}</p>
-                          {item.title === "Email" ? (
-                            <a
-                              href={`mailto:${item.text}`}
-                              className="mt-1 block break-all text-sm font-bold text-white underline-offset-4 hover:underline sm:text-base"
-                            >
-                              {item.text}
-                            </a>
-                          ) : (
-                            <p className="mt-1 text-sm font-bold text-white sm:text-base">{item.text}</p>
-                          )}
-                        </div>
-                      </div>
-                    </Reveal>
-                  );
-                })}
-              </div>
+                      </Reveal>
+                    );
+                  })}
+                </div>
               </Reveal>
             </div>
 
@@ -124,7 +138,9 @@ export function ContactSection() {
               >
                 <div className="grid gap-4 sm:grid-cols-2">
                   <label className="space-y-2">
-                    <span className="text-sm font-bold text-slate-700">Nama</span>
+                    <span className="text-sm font-bold text-slate-700">
+                      Nama
+                    </span>
                     <input
                       name="name"
                       type="text"
@@ -134,7 +150,9 @@ export function ContactSection() {
                     />
                   </label>
                   <label className="space-y-2">
-                    <span className="text-sm font-bold text-slate-700">Perusahaan</span>
+                    <span className="text-sm font-bold text-slate-700">
+                      Perusahaan
+                    </span>
                     <input
                       name="company"
                       type="text"
@@ -147,7 +165,9 @@ export function ContactSection() {
 
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
                   <label className="space-y-2">
-                    <span className="text-sm font-bold text-slate-700">Email</span>
+                    <span className="text-sm font-bold text-slate-700">
+                      Email
+                    </span>
                     <input
                       name="email"
                       type="email"
@@ -157,7 +177,9 @@ export function ContactSection() {
                     />
                   </label>
                   <label className="space-y-2">
-                    <span className="text-sm font-bold text-slate-700">Telepon</span>
+                    <span className="text-sm font-bold text-slate-700">
+                      Telepon
+                    </span>
                     <input
                       name="phone"
                       type="tel"
@@ -169,7 +191,9 @@ export function ContactSection() {
                 </div>
 
                 <label className="mt-4 block space-y-2">
-                  <span className="text-sm font-bold text-slate-700">Pesan</span>
+                  <span className="text-sm font-bold text-slate-700">
+                    Pesan
+                  </span>
                   <textarea
                     name="message"
                     rows={5}
@@ -189,7 +213,8 @@ export function ContactSection() {
                 </button>
                 {status === "success" ? (
                   <p className="mt-4 text-sm font-semibold text-emerald-600">
-                    Pesan berhasil dikirim. Tim VSN akan segera menghubungi Anda.
+                    Pesan berhasil dikirim. Tim VSN akan segera menghubungi
+                    Anda.
                   </p>
                 ) : null}
                 {status === "error" ? (
