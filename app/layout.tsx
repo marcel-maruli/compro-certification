@@ -31,7 +31,7 @@ const plusJakartaSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Jasa Konsultan Sertifikasi BPOM dan Izin Edar Produk | VSN",
+    default: "Pelatihan Versana",
     template: "%s | Veritas Sahabat Nusantara",
   },
   description:
@@ -65,7 +65,14 @@ export const metadata: Metadata = {
     description:
       "Pendampingan sertifikasi BPOM, izin edar, review label, dan pelatihan Registration Officer untuk UMKM dan industri.",
     url: siteUrl,
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "VSN - Konsultasi sertifikasi BPOM dan izin edar produk" }],
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "VSN - Konsultasi sertifikasi BPOM dan izin edar produk",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

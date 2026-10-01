@@ -79,11 +79,11 @@ export function ContactSection() {
                   Kontak VSN
                 </p>
                 <h2 className="max-w-xl text-2xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-                  Siap memulai proses sertifikasi produk Anda?
+                  Pelatihan Versana Terpadu.
                 </h2>
                 <p className="max-w-xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
-                  Kirim detail produk Anda, dan tim VSN akan membantu memetakan
-                  kebutuhan awal, alur kerja, serta langkah yang paling relevan.
+                  Silahkan menghubungi, berkonsultasi, membangun kerjasama pada
+                  kontak berikut :
                 </p>
 
                 <div className="flex flex-col gap-3">
